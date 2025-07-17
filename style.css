@@ -8,10 +8,19 @@ body {
   margin: 5px 0;
 }
 
-#grid {
+.channel-container {
+  margin-top: 10px;
+}
+
+.channel-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.grid {
   display: grid;
   gap: 2px;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .cell {
@@ -23,4 +32,8 @@ body {
 
 .cell.active {
   background: lightblue;
+}
+
+.cell.current-channel {
+  border: 2px solid red;
 }
