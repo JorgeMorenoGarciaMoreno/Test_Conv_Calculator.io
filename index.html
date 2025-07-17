@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conv2D Shape Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Conv2D Shape Calculator</h1>
+
+  <div id="inputs">
+    <label>Input Height: <input id="inputH" type="number" value="5"></label>
+    <label>Input Width: <input id="inputW" type="number" value="5"></label>
+    <label>Kernel Height: <input id="kernelH" type="number" value="3"></label>
+    <label>Kernel Width: <input id="kernelW" type="number" value="3"></label>
+    <label>Stride Height: <input id="strideH" type="number" value="1"></label>
+    <label>Stride Width: <input id="strideW" type="number" value="1"></label>
+    <label>Padding Height: <input id="padH" type="number" value="0"></label>
+    <label>Padding Width: <input id="padW" type="number" value="0"></label>
+  </div>
+
+  <h2>Output Shape: <span id="output">?</span></h2>
+
+  <h2>Animation</h2>
+  <div id="grid"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
