@@ -9,6 +9,7 @@ inputs.forEach(input => {
     params[input.id] = parseInt(input.value) || 0
     updateOutput()
     drawGrid()
+    resetAnimation()
   })
 })
 
@@ -36,6 +37,8 @@ function drawGrid() {
 }
 
 let posY = 0, posX = 0
+let intervalID = null
+
 function animate() {
   const totalH = params.inputH + 2 * params.padH
   const totalW = params.inputW + 2 * params.padW
@@ -65,6 +68,18 @@ function animate() {
   }
 }
 
-setInterval(animate, 500)
+function startAnimation() {
+  if (intervalID) clearInterval(intervalID)
+  intervalID = setInterval(animate, 500)
+}
+
+function resetAnimation() {
+  posX = 0
+  posY = 0
+  startAnimation()
+}
+
+// Initialize on load
 updateOutput()
 drawGrid()
+startAnimation()
