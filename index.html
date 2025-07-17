@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Conv2D Shape Calculator</title>
+  <title>Conv2D Shape Calculator with Channels & Dilation</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Conv2D Shape Calculator</h1>
 
   <div id="inputs">
+    <label>Input Channels: <input id="inChannels" type="number" value="3"></label>
     <label>Input Height: <input id="inputH" type="number" value="5"></label>
     <label>Input Width: <input id="inputW" type="number" value="5"></label>
     <label>Kernel Height: <input id="kernelH" type="number" value="3"></label>
@@ -18,13 +19,16 @@
     <label>Stride Width: <input id="strideW" type="number" value="1"></label>
     <label>Padding Height: <input id="padH" type="number" value="0"></label>
     <label>Padding Width: <input id="padW" type="number" value="0"></label>
+    <label>Dilation Height: <input id="dilH" type="number" value="1"></label>
+    <label>Dilation Width: <input id="dilW" type="number" value="1"></label>
   </div>
 
   <h2>Output Shape: <span id="output">?</span></h2>
 
   <h2>Animation</h2>
-  <div id="grid"></div>
+  <div id="channels"></div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
